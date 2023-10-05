@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -8,14 +9,14 @@ class LoginScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      body: Center(
+      body: SafeArea(
         child: Column(
           children: [
             const Expanded(
               flex: 1,
               child: Center(
                 child: Text(
-                  'Login',
+                  'Ingresar',
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.w500,
@@ -29,7 +30,7 @@ class LoginScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 30,
-                    vertical: 25,
+                    vertical: 15,
                   ),
                   child: Center(
                     child: Column(
@@ -44,13 +45,28 @@ class LoginScreen extends StatelessWidget {
                           decoration:
                               const InputDecoration(labelText: 'Contraseña'),
                         ),
-                        SizedBox(height: size.height * 0.05),
+                        SizedBox(height: size.height * 0.08),
                         FilledButton.tonal(
                           onPressed: () {},
                           child: const Text('Ingresar'),
                         ),
-                        SizedBox(height: size.height * 0.05),
-                        const Text('Registrar cuenta')
+                        SizedBox(height: size.height * 0.08),
+                        RichText(
+                          text: TextSpan(
+                            text: 'Si no tienes cuenta ',
+                            style: const TextStyle(color: Colors.black87),
+                            children: [
+                              TextSpan(
+                                text: 'registrate',
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    print('hola');
+                                  },
+                                style: TextStyle(color: Colors.pink[600]),
+                              )
+                            ],
+                          ),
+                        )
                       ],
                     ),
                   ),
