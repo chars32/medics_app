@@ -2,8 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class LoginScreen extends StatelessWidget {
               flex: 1,
               child: Center(
                 child: Text(
-                  'Ingresar',
+                  'Registrarse',
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.w500,
@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 2,
+              flex: 3,
               child: SingleChildScrollView(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
@@ -46,22 +46,27 @@ class LoginScreen extends StatelessWidget {
                           decoration:
                               const InputDecoration(labelText: 'Contraseña'),
                         ),
+                        SizedBox(height: size.height * 0.01),
+                        TextFormField(
+                          decoration: const InputDecoration(
+                              labelText: 'Repetir Contraseña'),
+                        ),
                         SizedBox(height: size.height * 0.08),
                         FilledButton.tonal(
                           onPressed: () {},
-                          child: const Text('Ingresar'),
+                          child: const Text('Registrar'),
                         ),
                         SizedBox(height: size.height * 0.08),
                         RichText(
                           text: TextSpan(
-                            text: 'Si no tienes cuenta ',
+                            text: 'Tienes cuenta ',
                             style: const TextStyle(color: Colors.black87),
                             children: [
                               TextSpan(
-                                text: 'registrate',
+                                text: 'ingresa',
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
-                                    context.push('/register');
+                                    context.pop();
                                   },
                                 style: TextStyle(color: Colors.pink[600]),
                               )
