@@ -13,5 +13,9 @@ final appRouter = GoRouter(
       path: '/register',
       builder: (context, state) => const RegisterScreen(),
     ),
+    GoRoute(
+      path: '/dashboard',
+      builder: (context, state) => const DashBoardScreen(),
+    ),
   ],
 );

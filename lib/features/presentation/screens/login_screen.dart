@@ -48,7 +48,9 @@ class LoginScreen extends StatelessWidget {
                         ),
                         SizedBox(height: size.height * 0.08),
                         FilledButton.tonal(
-                          onPressed: () {},
+                          onPressed: () {
+                            context.go('/dashboard');
+                          },
                           child: const Text('Ingresar'),
                         ),
                         SizedBox(height: size.height * 0.08),
