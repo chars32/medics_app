@@ -123,65 +123,289 @@ class DashBoardScreen extends StatelessWidget {
               SizedBox(height: size.height * 0.03),
               SizedBox(
                 width: size.width,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: const Text('Citas para hoy'),
+              ),
+              SizedBox(
+                height: size.height * 0.02,
+              ),
+              Expanded(
+                child: ListView(
                   children: [
-                    const Text('Citas para hoy'),
-                    SingleChildScrollView(
+                    Card(
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          SizedBox(
-                            width: size.width,
-                            child: Card(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                children: [
-                                  Container(
-                                    decoration:
-                                        BoxDecoration(color: Colors.green),
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 5, horizontal: 15),
-                                      child: Text(
-                                        'Cancelada',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                    ),
-                                  ),
-                                  Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(
-                                        width: size.width * 0.2,
-                                        child: Icon(
-                                          Icons.person,
-                                          size: 40,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        child: Column(
-                                          children: [
-                                            Text('Dr Doctor Zine'),
-                                            Text('Dr Doctor Zine'),
-                                            Text('Dr Doctor Zine'),
-                                            Text('Dr Doctor Zine'),
-                                            Text('Dr Doctor Zine'),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
+                          Container(
+                            decoration:
+                                const BoxDecoration(color: Colors.green),
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 5, horizontal: 15),
+                              child: Text(
+                                'Vigente',
+                                style: TextStyle(color: Colors.white),
                               ),
                             ),
                           ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                width: size.width * 0.2,
+                                child: const Icon(
+                                  Icons.person,
+                                  size: 40,
+                                ),
+                              ),
+                              const SizedBox(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Dr Doctor Zine',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                    SizedBox(height: 15),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Servicio'),
+                                        SizedBox(width: 40),
+                                        Text(
+                                          'servicio 1',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 10),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Fecha'),
+                                        SizedBox(width: 40),
+                                        Text(
+                                          '09-Oct-2023',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 10),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Hora'),
+                                        SizedBox(width: 40),
+                                        Text(
+                                          '01:40 PM - 03:00 PM',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 10),
+                                  ],
+                                ),
+                              )
+                            ],
+                          )
                         ],
                       ),
-                    )
+                    ),
+                    SizedBox(height: 10),
+                    Card(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Container(
+                            decoration:
+                                BoxDecoration(color: Colors.orangeAccent[700]),
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 5, horizontal: 15),
+                              child: Text(
+                                'Terminada',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                width: size.width * 0.2,
+                                child: const Icon(
+                                  Icons.person,
+                                  size: 40,
+                                ),
+                              ),
+                              const SizedBox(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Dr Doctor Zine',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                    SizedBox(height: 15),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Servicio'),
+                                        SizedBox(width: 40),
+                                        Text(
+                                          'servicio 1',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 10),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Fecha'),
+                                        SizedBox(width: 40),
+                                        Text(
+                                          '09-Oct-2023',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 10),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Hora'),
+                                        SizedBox(width: 40),
+                                        Text(
+                                          '01:40 PM - 03:00 PM',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 10),
+                                  ],
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Card(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Container(
+                            decoration: const BoxDecoration(color: Colors.red),
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 5, horizontal: 15),
+                              child: Text(
+                                'Cancelada',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                width: size.width * 0.2,
+                                child: const Icon(
+                                  Icons.person,
+                                  size: 40,
+                                ),
+                              ),
+                              const SizedBox(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Dr Doctor Zine',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                    SizedBox(height: 15),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Servicio'),
+                                        SizedBox(width: 40),
+                                        Text(
+                                          'servicio 1',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 10),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Fecha'),
+                                        SizedBox(width: 40),
+                                        Text(
+                                          '09-Oct-2023',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 10),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Hora'),
+                                        SizedBox(width: 40),
+                                        Text(
+                                          '01:40 PM - 03:00 PM',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 10),
+                                  ],
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 10),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
