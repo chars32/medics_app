@@ -52,68 +52,20 @@ class DashBoardScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Card(
-                          child: SizedBox(
-                            height: size.height * 0.15,
-                            width: size.width * 0.27,
-                            child: const Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  '3',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w700),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text('Citas para hoy'),
-                              ],
-                            ),
-                          ),
+                        _CardNumber(
+                          size: size,
+                          count: 3,
+                          title: 'Citas para hoy',
                         ),
-                        Card(
-                          child: SizedBox(
-                            height: size.height * 0.15,
-                            width: size.width * 0.27,
-                            child: const Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  '3',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w700),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text('Total de citas'),
-                              ],
-                            ),
-                          ),
+                        _CardNumber(
+                          size: size,
+                          count: 4,
+                          title: 'Total de citas',
                         ),
-                        Card(
-                          child: SizedBox(
-                            height: size.height * 0.15,
-                            width: size.width * 0.27,
-                            child: const Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  '3',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w700),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text('Pacientes'),
-                              ],
-                            ),
-                          ),
+                        _CardNumber(
+                          size: size,
+                          count: 5,
+                          title: 'Pacientes',
                         ),
                       ],
                     )
@@ -129,285 +81,223 @@ class DashBoardScreen extends StatelessWidget {
                 height: size.height * 0.02,
               ),
               Expanded(
-                child: ListView(
-                  children: [
-                    Card(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Container(
-                            decoration:
-                                const BoxDecoration(color: Colors.green),
-                            child: const Padding(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 5, horizontal: 15),
-                              child: Text(
-                                'Vigente',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                width: size.width * 0.2,
-                                child: const Icon(
-                                  Icons.person,
-                                  size: 40,
-                                ),
-                              ),
-                              const SizedBox(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Dr Doctor Zine',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                    SizedBox(height: 15),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text('Servicio'),
-                                        SizedBox(width: 40),
-                                        Text(
-                                          'servicio 1',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(height: 10),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text('Fecha'),
-                                        SizedBox(width: 40),
-                                        Text(
-                                          '09-Oct-2023',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(height: 10),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text('Hora'),
-                                        SizedBox(width: 40),
-                                        Text(
-                                          '01:40 PM - 03:00 PM',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(height: 10),
-                                  ],
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    Card(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Container(
-                            decoration:
-                                BoxDecoration(color: Colors.orangeAccent[700]),
-                            child: const Padding(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 5, horizontal: 15),
-                              child: Text(
-                                'Terminada',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                width: size.width * 0.2,
-                                child: const Icon(
-                                  Icons.person,
-                                  size: 40,
-                                ),
-                              ),
-                              const SizedBox(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Dr Doctor Zine',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                    SizedBox(height: 15),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text('Servicio'),
-                                        SizedBox(width: 40),
-                                        Text(
-                                          'servicio 1',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(height: 10),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text('Fecha'),
-                                        SizedBox(width: 40),
-                                        Text(
-                                          '09-Oct-2023',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(height: 10),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text('Hora'),
-                                        SizedBox(width: 40),
-                                        Text(
-                                          '01:40 PM - 03:00 PM',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(height: 10),
-                                  ],
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    Card(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Container(
-                            decoration: const BoxDecoration(color: Colors.red),
-                            child: const Padding(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 5, horizontal: 15),
-                              child: Text(
-                                'Cancelada',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                width: size.width * 0.2,
-                                child: const Icon(
-                                  Icons.person,
-                                  size: 40,
-                                ),
-                              ),
-                              const SizedBox(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Dr Doctor Zine',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                    SizedBox(height: 15),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text('Servicio'),
-                                        SizedBox(width: 40),
-                                        Text(
-                                          'servicio 1',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(height: 10),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text('Fecha'),
-                                        SizedBox(width: 40),
-                                        Text(
-                                          '09-Oct-2023',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(height: 10),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text('Hora'),
-                                        SizedBox(width: 40),
-                                        Text(
-                                          '01:40 PM - 03:00 PM',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(height: 10),
-                                  ],
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                  ],
+                child: ListView.builder(
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return Column(
+                      children: [
+                        _CardSchedules(size: size),
+                      ],
+                    );
+                  },
                 ),
-              ),
+              )
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class _CardNumber extends StatelessWidget {
+  final Size size;
+  final int count;
+  final String title;
+
+  const _CardNumber({
+    required this.size,
+    required this.count,
+    required this.title,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: SizedBox(
+        height: size.height * 0.15,
+        width: size.width * 0.27,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              count.toString(),
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(title),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _CardSchedules extends StatelessWidget {
+  const _CardSchedules({
+    required this.size,
+  });
+
+  final Size size;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Cita'),
+              Icon(Icons.schedule_rounded),
+            ],
+          ),
+          content: SizedBox(
+              width: size.width,
+              height: size.width * 0.5,
+              child: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Patient name',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 16,
+                    ),
+                  ),
+                  SizedBox(height: 15),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Servicio'),
+                      SizedBox(width: 40),
+                      Text(
+                        'servicio 1',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Fecha'),
+                      SizedBox(width: 40),
+                      Text(
+                        '09-Oct-2023',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Hora'),
+                      SizedBox(width: 40),
+                      Text(
+                        '01:40 PM - 03:00 PM',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                ],
+              )),
+        ),
+      ),
+      child: Card(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Container(
+              decoration: const BoxDecoration(color: Colors.green),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+                child: Text(
+                  'Vigente',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: size.width * 0.2,
+                  child: const Icon(
+                    Icons.person,
+                    size: 40,
+                  ),
+                ),
+                const SizedBox(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Patient',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      SizedBox(height: 15),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Servicio'),
+                          SizedBox(width: 40),
+                          Text(
+                            'servicio 1',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                            ),
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Fecha'),
+                          SizedBox(width: 40),
+                          Text(
+                            '09-Oct-2023',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                            ),
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Hora'),
+                          SizedBox(width: 40),
+                          Text(
+                            '01:40 PM - 03:00 PM',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                            ),
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                    ],
+                  ),
+                )
+              ],
+            )
+          ],
         ),
       ),
     );
