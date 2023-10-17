@@ -1,6 +1,5 @@
 import 'package:go_router/go_router.dart';
-
-import '../../features/presentation/screens/screens.dart';
+import 'package:medics_app/features/auth/presentation/screens/screens.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/login',
