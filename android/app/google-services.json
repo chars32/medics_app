@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "119311611290",
+    "project_id": "push-notifications-medics",
+    "storage_bucket": "push-notifications-medics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119311611290:android:469176102e75df8e27f623",
+        "android_client_info": {
+          "package_name": "com.example.medics_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHMbQ_GcN9lO57vKkpdQDIrCnVekuUSvI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
